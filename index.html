@@ -5,6 +5,7 @@
   <title>WebApp Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/toggle-switch.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -15,8 +16,8 @@
     <div>
       <img src="icons/icon-bell.svg" alt="Notification Bell">
       <div id="notification"></div>
-      <img src="images/member-3.jpg" alt="Profile Photo">
-      <h3>Lillie Olson</h3>
+      <img src="images/member-profile.jpg" alt="Profile Photo">
+      <h3>Audrey Bazyk</h3>
     </div>
   </header>
 
@@ -63,6 +64,7 @@
       <div class="widget-container-full">
         <!-- LINE GRAPH ATTACH ELEMENT -->
         <canvas id="traffic-chart"></canvas>
+        <img src="images/example-line.png">
       </div>
     </section>
 
@@ -72,6 +74,7 @@
       <div class="widget-container-half">
         <!-- BAR GRAPH ATTACH ELEMENT -->
         <canvas id="daily-chart"></canvas>
+        <img src="images/example-bar.png">
       </div>
     </section>
 
@@ -81,10 +84,11 @@
       <div class="widget-container-half">
         <!-- DOUGHNUT GRAPH ATTACH ELEMENT -->
         <canvas id="mobile-users-chart"></canvas>
+        <img src="images/example-doughnut.png">
       </div>
     </section>
 
-<!-- SOCIAL STATS -->
+<!-- SOCIAL STATS SECTION -->
 
     <!-- TWITTER -->
     <div class="social-container">
@@ -132,7 +136,141 @@
       </div>
     </div>
 
-  </main>
+<!-- MEMBERS SECTION -->
+    <section class="members">
+      <h3>New Members</h3>
 
+      <div class="members-container">
+        <img src="images/member-1.jpg" alt="Sarah Beall">
+        <div class="members-text">
+          <p>Sarah Beall</p>
+          <a href="#">sarah.beall@example.com</a>
+        </div>
+        <p>08/15/2020</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-2.jpg" alt="James Reynolds">
+        <div class="members-text">
+          <p>James Reynolds</p>
+          <a href="#">james.reynolds@example.com</a>
+        </div>
+        <p>08/15/2020</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-3.jpg" alt="Lillie Olson">
+        <div class="members-text">
+          <p>Lillie Olson</p>
+          <a href="#">lillie.olson@example.com</a>
+        </div>
+        <p>08/15/2020</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-4.jpg" alt="Alex Chambers">
+        <div class="members-text">
+          <p>Alex Chambers</p>
+          <a href="#">alex.chambers@example.com</a>
+        </div>
+        <p>08/15/2020</p>
+      </div>
+    </section>
+
+<!-- RECENT ACTIVITY SECTION -->
+    <section class="recent-activity">
+      <h3>Recent Activity</h3>
+
+      <div class="members-container">
+        <img src="images/member-1.jpg" alt="Sarah Beall">
+        <div class="members-text">
+          <p>Sarah Beall liked the post <strong>Facebook's Changes for 2020</strong></p>
+        </div>
+        <p>3 Hours Ago</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-2.jpg" alt="James Reynolds">
+        <div class="members-text">
+          <p>James Reynolds commented on <strong>WebApp's SEO Tips</strong></p>
+        </div>
+        <p>4 Hours Ago</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-3.jpg" alt="Lillie Olson">
+        <div class="members-text">
+          <p>Lillie Olson commented on <strong>Facebook's Changes for 2020</strong></p>
+        </div>
+        <p>6 Hours Ago</p>
+      </div>
+
+      <div class="members-container">
+        <img src="images/member-4.jpg" alt="Alex Chambers">
+        <div class="members-text">
+          <p>Alex Chambers liked the post <strong>WebApp's SEO Tips</strong></p>
+        </div>
+        <p>1 Day Ago</p>
+      </div>
+    </section>
+
+<!-- MESSAGING SECTION -->
+    <section class="message">
+      <h3>Message User</h3>
+      <form class="widget-container">
+        <input type="text" placeholder="Search for User" class="form-field" id="userField">
+        <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
+        <button class="button-primary" id="send">Send</button>
+      </form>
+    </section>
+
+<!-- SETTINGS SECTION -->
+    <section class="settings">
+      <h3>Settings</h3>
+
+        <!-- EMAIL NOTIFICATIONS SETTING -->
+        <label class="switch-light switch-candy" onclick="">
+          <input type="checkbox">
+          <strong>
+            Send Email Notifications
+          </strong>
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+
+        <!-- PROFILE SETTING -->
+        <label class="switch-light switch-candy" onclick="">
+          <input type="checkbox">
+          <strong>
+            Set Profile to Public
+          </strong>
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+
+        <!-- TIMEZONE SETTING -->
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+          <option>Eastern</option>
+          <option>Central</option>
+          <option>Mountain</option>
+          <option>Pacific</option>
+          <option>Alaska</option>
+          <option>Hawaii</option>
+        </select>
+
+      <!-- SAVE & CANCEL BUTTONS -->
+      <div class="settings-button">
+        <button class="button-primary" id="save">Save</button>
+        <button class="button-disabled" id="cancel">Cancel</button>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

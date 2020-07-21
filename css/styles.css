@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* GRID STYLES */
 
 .grid-container {
@@ -18,21 +22,64 @@ h1 {
   color: #fff;
 }
 
-/* BASE STYLES */
-
-* {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+h2 {
+  font-size: 1.3rem;
+  margin: 1.3rem;
 }
+
+h3 {
+  font-size: .9rem;
+  margin: .9rem;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+  color: #7f7f7f;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #4d4d4d;
+}
+
+/* HEADER STYLES */
 
 header {
   grid-area: header;
   background-color: #248188;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: baseline;
+}
+
+.header-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.header-img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
 }
 
 nav {
   grid-area: navigation;
   background-color: #0d5259;
+}
+
+nav img {
+  width: 50px;
+  height: 50px;
 }
 
 main {

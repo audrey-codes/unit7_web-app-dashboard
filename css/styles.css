@@ -1,6 +1,4 @@
-* {
-  font-family: 'Poppins', sans-serif;
-}
+/* GRID STYLES */
 
 .grid-container {
   display: grid;
@@ -12,11 +10,24 @@
     "main";
 }
 
+/* TYPE STYLES */
+
+h1 {
+  font-weight: 300;
+  margin: 2rem;
+  color: #fff;
+}
+
+/* BASE STYLES */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 header {
   grid-area: header;
   background-color: #248188;
-  color: #fff;
-  font-weight: 300;
 }
 
 nav {

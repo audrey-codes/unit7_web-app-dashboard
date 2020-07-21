@@ -94,6 +94,40 @@ nav img {
 
 /* MAIN STYLES */
 
-main {
+.main-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+.headline {
+  background-color: #fff;
+  margin-right: 30px;
+}
+
+.main-header-search {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #b2b2b2;
+  border-left: 2px solid #b2b2b2;
+  padding: 20px 30px;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+  font-weight: 300;
+  color: #b2b2b2;
+}
+
+.widget-container-full {
+  width: 100%;
+}
+
+.width-container-half {
+  width: 50%;
 }

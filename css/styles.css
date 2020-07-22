@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-/* TYPE STYLES */
+/* --------------------------
+  Type Styles
+--------------------------- */
 
 h2 {
   font-size: 1.3rem;
@@ -30,7 +32,16 @@ body {
   color: #4d4d4d;
 }
 
-/* HEADER STYLES */
+/* --------------------------
+  SVG Styles
+--------------------------- */
+
+.social-image {
+}
+
+/* --------------------------
+  Header Styles
+--------------------------- */
 
 header {
   background-color: #248188;

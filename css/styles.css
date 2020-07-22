@@ -4,8 +4,6 @@
 
 /* TYPE STYLES */
 
-
-
 h2 {
   font-size: 1.3rem;
   margin: 1.3rem;
@@ -124,10 +122,9 @@ nav img {
   color: #b2b2b2;
 }
 
-.widget-container-full {
-  width: 100%;
-}
+/* SOCIAL STYLES */
 
-.width-container-half {
-  width: 50%;
+.social svg {
+  width: 80px;
+  height: 80px;
 }

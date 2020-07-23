@@ -1,275 +1,285 @@
 <!DOCTYPE html>
-<html lang ="en">
-
+<html lang="en">
 <head>
-  <title>WebApp Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/toggle-switch.css" rel="stylesheet">
-  <link href="css/grid.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebApp Dashboard</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/grid.css">
 </head>
 
 <body>
-
-  <header>
-    <h1><span class="bold">Web</span>App&trade;</h1>
-    <div class="user-profile">
-      <img class="header-icon" src="icons/icon-bell.svg" alt="Notification Bell">
-      <div id="notification"></div>
-      <img class="header-img" src="images/member-profile.jpg" alt="Profile Photo">
-      <h3 class="header-name">Audrey Bazyk</h3>
-    </div>
-  </header>
+<!-- HEADER -->
+	<div class="grid-container">
+	<header>
+		<h1 class="header-title"><span class="bold">Web</span>App&trade;</h1>
+		<div class="notification-bell">
+			<div class="dot"></div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="bell">
+				<path class="line" d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
+				  fill="white"/>
+			  </svg>
+		</div>
+		<div class="white-line"></div>
+		<div class="user">
+			<img class="profile-pic" src="images/member-profile.jpg" alt="profile photo">
+			<h3 class="user-name">Audrey Bazyk</h3>
+		</div>
+	</header>
 
 <!-- NAVIGATION -->
-  <nav>
-    <a>
-      <img src="icons/icon-dashboard.svg" alt="Dashboard">
-    </a>
-    <a>
-      <img src="icons/icon-members.svg" alt="Members">
-    </a>
-    <a>
-      <img src="icons/icon-visits.svg" alt="Visits">
-    </a>
-    <a>
-      <img src="icons/icon-settings.svg" alt="Settings">
-    </a>
-  </nav>
+	<nav>
+		<a href="#"><img class="nav-img" src="icons/icon-dashboard.svg"></a>
+		<a href="#"><img class="nav-img" src="icons/icon-members.svg"></a>
+		<a href="#"><img class="nav-img" src="icons/icon-visits.svg"></a>
+		<a href="#"><img class="nav-img" src="icons/icon-settings.svg"></a>
+	</nav>
 
-  <main>
-    <div class="main-header">
-      <h2 class="headline">Dashboard</h2>
-      <div class="main-header-search">
-        <input class="search-bar" type="search" placeholder="Search" />
-      </div>
-    </div>
+<!-- MAIN -->
+ <main>
+	  <div class="dash-top">
+			<div class="main-header">
+				<h3 class="headline-dashboard">Dashboard</h3>
+				<div class="main-header-search">
+					<input class="input" type="search" placeholder="Search. . . ">
+				</div>
+			</div>
+	  </div>
 
-<!-- ALERT BAR -->
-    <div class="alert" id="alert">
-      <!-- INSERT JS HERE -->
-    </div>
+	   	<!-- ALERT -->
+			<div class="alert" id="alert"></div>
 
-<!-- TRAFFIC SECTION -->
-    <section class="traffic">
-      <div class="traffic-container">
-        <h3>Traffic</h3>
-        <ul class="traffic-nav">
-          <li class="traffic-nav-link">Hourly</li>
-          <li class="traffic-nav-link">Daily</li>
-          <li class="traffic-nav-link active">Weekly</li>
-          <li class="traffic-nav-link">Monthly</li>
-        </ul>
-      </div>
-      <div class="widget-container-full">
-        <!-- LINE GRAPH ATTACH ELEMENT -->
-        <canvas id="traffic-chart"></canvas>
-        <img src="images/example-line.png" alt="REPLACE ME">
-      </div>
-    </section>
+		<div class="full-size-chart">
+			<section class="traffic">
+				<div class="traffic-nav-container">
+					<h3 class="headline-section">Traffic</h3>
+					<ul class="traffic-nav">
+						<li class="traffic-nav-link">Hourly</li>
+						<li class="traffic-nav-link">Daily</li>
+						<li class="active traffic-nav-link">Weekly</li>
+						<li class="traffic-nav-link">Monthly</li>
+					</ul>
+				</div>
 
-    <!-- BAR GRAPH -->
-    <section class="daily">
-      <h3>Daily Traffic</h3>
-      <div class="widget-container-half">
-        <!-- BAR GRAPH ATTACH ELEMENT -->
-        <canvas id="daily-chart"></canvas>
-        <img src="images/example-bar.png" alt="REPLACE ME">
-      </div>
-    </section>
+				<div class="widget-container-full">
+					<canvas id="traffic-chart"></canvas>
+				</div>
+			</section>
+		</div>
 
-    <!-- DOUGHNUT GRAPH -->
-    <section class="mobile">
-      <h3>Mobile Users</h3>
-      <div class="widget-container-half">
-        <!-- DOUGHNUT GRAPH ATTACH ELEMENT -->
-        <canvas id="mobile-users-chart"></canvas>
-        <img src="images/example-doughnut.png" alt="REPLACE ME">
-      </div>
-    </section>
 
-<!-- SOCIAL STATS SECTION -->
+		<div class="half-size-charts">
 
-    <section class="social">
-      <!-- TWITTER -->
-      <div class="social-container">
-        <div class="social-image">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-          <path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm12.2 18.8v.8c0 8.3-6.3 17.9-17.9 17.9-3.5 0-6.9-1.1-9.7-2.9.5.1 1.1.1 1.5.1 3 0 5.7-1 7.9-2.7-2.7-.1-5.1-1.9-5.8-4.4.4.1.8.1 1.1.1.6 0 1.1-.1 1.6-.2-2.9-.6-5.1-3.1-5.1-6.1v-.1c.9.5 1.8.8 2.9.8-1.6-1.2-2.7-3.1-2.7-5.3 0-1.1.3-2.2.9-3.2 3.2 3.8 7.8 6.3 13 6.6-.1-.5-.2-1-.2-1.4 0-3.5 2.9-6.3 6.3-6.3 1.7 0 3.4.8 4.5 2 1.4-.3 2.8-.8 4-1.5-.5 1.4-1.4 2.7-2.8 3.4 1.3-.1 2.5-.5 3.6-1-.8 1.3-1.8 2.5-3.1 3.4z" fill="#0d5259"/>
-        </svg>
-        </div>
-        <div class="social-text">
-          <p class="social-name">Twitter</p>
-          <p class="social-count">10,345</p>
-        </div>
-      </div>
+		<div class="chart-1">
+			<h3 class="headline-section">DAILY TRAFFIC</h3>
+			<div class="widget-container-half">
+				<!-- element bar graph will attach to -->
+				<canvas id="daily-traffic"></canvas>
+			</div>
+		</div>
 
-      <!-- FACEBOOK -->
-      <div class="social-container">
-        <div class="social-image">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+		<div class="chart-2">
+			<h3 class="headline-section">MOBILE USERS</h3>
+			<div class="widget-container-mobile">
+				<!-- element bar graph will attach to -->
+				<canvas id="doughnutChart"></canvas>
+			</div>
+		</div>
+
+		</div>
+
+<!-- SOCIAL -->
+	<h2 class="heading">Social Stats</h2>
+	   <div class="social">
+		  <div class="social-container">
+			<div class="box-twitter">
+				<div class="twitter-icon">
+					<svg id="twitter-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	          <path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm12.2 18.8v.8c0 8.3-6.3 17.9-17.9 17.9-3.5 0-6.9-1.1-9.7-2.9.5.1 1.1.1 1.5.1 3 0 5.7-1 7.9-2.7-2.7-.1-5.1-1.9-5.8-4.4.4.1.8.1 1.1.1.6 0 1.1-.1 1.6-.2-2.9-.6-5.1-3.1-5.1-6.1v-.1c.9.5 1.8.8 2.9.8-1.6-1.2-2.7-3.1-2.7-5.3 0-1.1.3-2.2.9-3.2 3.2 3.8 7.8 6.3 13 6.6-.1-.5-.2-1-.2-1.4 0-3.5 2.9-6.3 6.3-6.3 1.7 0 3.4.8 4.5 2 1.4-.3 2.8-.8 4-1.5-.5 1.4-1.4 2.7-2.8 3.4 1.3-.1 2.5-.5 3.6-1-.8 1.3-1.8 2.5-3.1 3.4z" fill="#0d5259"/>
+	        </svg>
+				</div>
+				<div class="twitter-info">
+					<h2>Twitter</h2>
+					<p>10,345</p>
+				</div>
+			</div>
+		  </div>
+
+		  <div class="social-container">
+			<div class="box-fb">
+				<div class="fb-icon">
+					<svg id="fb-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
             <path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm6.9 25h-4.5v16h-6.6V25h-3.2v-5.7h3.2v-3.7c0-2.6 1.2-6.7 6.7-6.7h4.9v5.5h-3.6c-.6 0-1.4.3-1.4 1.5v3.3h5.1l-.6 5.8z" fill="#0d5259"/>
           </svg>
-        </div>
-        <div class="social-text">
-          <p class="social-name">Facebook</p>
-          <p class="social-count">8,739</p>
-        </div>
-      </div>
+				</div>
+				<div class="fb-info">
+					<h2>Facebook</h2>
+					<p>8,739</p>
+				</div>
+			</div>
+		  </div>
 
-      <!-- INSTAGRAM -->
-      <div class="social-container">
-        <div class="social-image">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 50.5 50.5" xml:space="preserve">
+		  <div class="social-container">
+			<div class="box-insta">
+				<div class="insta-icon">
+					<svg version="1.1" id="insta-svg" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 50.5 50.5" xml:space="preserve">
             <style>.st0{fill:#0d5259}</style>
             <path class="st0" d="M30.9 13.4H19.6c-1.6 0-2.9.6-4.1 1.7s-1.7 2.5-1.7 4.1v11.9c0 1.6.6 2.9 1.7 4.1s2.5 1.7 4.1 1.7h11.3c1.6 0 2.9-.6 4.1-1.7s1.7-2.5 1.7-4.1V19.2c0-1.6-.6-2.9-1.7-4.1s-2.6-1.7-4.1-1.7zm-5.6 19.2c-4.2 0-7.4-3.3-7.4-7.4 0-4.2 3.4-7.4 7.4-7.4 4.2 0 7.4 3.3 7.4 7.4 0 4.1-3.3 7.4-7.4 7.4zm7.6-13.3c-1 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7c1 0 1.7.8 1.7 1.7s-.8 1.7-1.7 1.7z"/>
             <circle class="st0" cx="25.3" cy="25.1" r="4.8"/>
             <path class="st0" d="M25.3.3C11.5.3.3 11.5.3 25.3s11.2 25 25 25 25-11.2 25-25-11.2-25-25-25zm13.5 31c0 4.3-3.5 7.9-7.9 7.9H19.6c-4.3 0-7.9-3.5-7.9-7.9v-12c0-4.3 3.5-7.9 7.9-7.9h11.3c4.3 0 7.9 3.5 7.9 7.9v12z"/>
           </svg>
-        </div>
-        <div class="social-text">
-          <p class="social-name">Instagram</p>
-          <p class="social-count">9,543</p>
-        </div>
-      </div>
-    </section>
+				</div>
+				<div class="insta-info">
+					<h2>Instagram</h2>
+					<p>9,543</p>
+				</div>
+			</div>
 
-<!-- MEMBERS SECTION -->
-    <section class="members">
-      <h3>New Members</h3>
+		  </div>
+		</div>
 
-      <div class="members-container">
-        <img src="images/member-1.jpg" alt="Sarah Beall">
-        <div class="members-text">
-          <p class="bold">Sarah Beall</p>
-          <a href="#">sarah.beall@example.com</a>
-        </div>
-        <p>08/15/2020</p>
-      </div>
+<!-- MEMBERS -->
+	   <section class="member-section">
+		  <div class="widget-container-half">
+				<h2 class="heading">NEW MEMBERS</h2>
+				<div class="member-container">
+					<img src="images/member-1.jpg" class="member-img" alt="profile-photo">
+					<div class="member-info">
+						<p>Sarah Beall</p>
+	          <a href="#">sarah.beall@example.com</a>
+					</div>
+					<p class="member-date">07/15/20</p>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-2.jpg" alt="James Reynolds">
-        <div class="members-text">
-          <p class="bold">James Reynolds</p>
+			<div class="member-container">
+				<img src="images/member-2.jpg" class="member-img" alt="profile-photo">
+				<div class="member-info">
+					<p>James Reynolds</p>
           <a href="#">james.reynolds@example.com</a>
-        </div>
-        <p>08/15/2020</p>
-      </div>
+				</div>
+				<p class="member-date">07/15/20</p>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-3.jpg" alt="Lillie Olson">
-        <div class="members-text">
-          <p class="bold">Lillie Olson</p>
+			<div class="member-container">
+				<img src="images/member-3.jpg" class="member-img" alt="profile-photo">
+				<div class="member-info">
+					<p>Lillie Olson</p>
           <a href="#">lillie.olson@example.com</a>
-        </div>
-        <p>08/15/2020</p>
-      </div>
+				</div>
+				<p class="member-date">07/15/20</p>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-4.jpg" alt="Alex Chambers">
-        <div class="members-text">
-          <p class="bold">Alex Chambers</p>
+			<div class="member-container">
+				<img src="images/member-4.jpg" class="member-img" alt="profile-photo">
+				<div class="member-info">
+					<p>Alex Chambers</p>
           <a href="#">alex.chambers@example.com</a>
-        </div>
-        <p>08/15/2020</p>
-      </div>
-    </section>
+				</div>
+				<p class="member-date">07/15/20</p>
+			</div>
+			</div>
 
-<!-- RECENT ACTIVITY SECTION -->
-    <section class="activity">
-      <h3>Recent Activity</h3>
+<!-- RECENT ACTIVITY -->
 
-      <div class="members-container">
-        <img src="images/member-1.jpg" alt="Sarah Beall">
-        <div class="members-text">
-          <p>Sarah Beall liked the post <strong>Facebook's Changes for 2020</strong></p>
-        </div>
-        <p>3 Hours Ago</p>
-      </div>
+		  <div class="widget-container-half">
+			<h2 class="heading">RECENT ACTIVITY</h2>
+			<div class="member-container">
+				<img src="images/member-1.jpg" class="member-img" alt="profile-photo">
+				<div class="activity-info">
+					<p>Sarah Beall commented on WebApp's SEO tips</p>
+					<p>3 hours ago</p>
+				</div>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-2.jpg" alt="James Reynolds">
-        <div class="members-text">
-          <p>James Reynolds commented on <strong>WebApp's SEO Tips</strong></p>
-        </div>
-        <p>4 Hours Ago</p>
-      </div>
+			<div class="member-container">
+				<img src="images/member-2.jpg" class="member-img" alt="profile-photo">
+				<div class="activity-info">
+					<p>James Reynolds liked your Facebook's Changes for 2020</p>
+					<p>4 hours ago</p>
+				</div>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-3.jpg" alt="Lillie Olson">
-        <div class="members-text">
-          <p>Lillie Olson commented on <strong>Facebook's Changes for 2020</strong></p>
-        </div>
-        <p>6 Hours Ago</p>
-      </div>
+			<div class="member-container">
+				<img src="images/member-3.jpg" class="member-img" alt="profile-photo">
+				<div class="activity-info">
+					<p>Lillie Olson commented on Facebook's Changes for 2020</p>
+					<p>6 hours ago</p>
+				</div>
+			</div>
 
-      <div class="members-container">
-        <img src="images/member-4.jpg" alt="Alex Chambers">
-        <div class="members-text">
-          <p>Alex Chambers liked the post <strong>WebApp's SEO Tips</strong></p>
-        </div>
-        <p>1 Day Ago</p>
-      </div>
-    </section>
+			<div class="member-container">
+				<img src="images/member-4.jpg" class="member-img" alt="profile-photo">
+				<div class="activity-info">
+					<p>Alex Chambers posted YourApps's SEO Tips</p>
+					<p>1 day ago</p>
+				</div>
+			</div>
+		  </div>
 
-<!-- MESSAGING SECTION -->
-    <section class="message">
-      <h3>Message User</h3>
-      <form class="widget-container">
-        <input type="text" placeholder="Search for User" class="form-field" id="userField">
-        <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
-        <button class="button-primary" id="send">Send</button>
-      </form>
-    </section>
+		 </section>
 
-<!-- SETTINGS SECTION -->
-    <section class="settings">
-      <h3>Settings</h3>
+<!-- MESSAGE USER -->
+		<div class="message-section">
+			<h3 class="heading">MESSAGE USER</h3>
+			<div class="message">
+				<input type="text" class="input-contact" placeholder="Search for User">
+				<textarea class="textarea-contact">Message for User</textarea>
+				<button type="submit" class="btn-send">SEND</button>
+			</div>
+		</div>
 
-      <!-- EMAIL NOTIFICATIONS SETTING -->
-      <label class="switch-light switch-candy" onclick="">
-        <input type="checkbox">
-        <strong>
-          Send Email Notifications
-        </strong>
-        <span>
-          <span>Off</span>
-          <span>On</span>
-          <a></a>
-        </span>
-      </label>
+<!-- SETTINGS -->
+		<div class="settings">
+			<h3 class="heading">SETTINGS</h3>
+			<div class="settings-btn">
+			<div class="btn-1">
+				<label class="switch-light switch-ios" onclick="">
+					<input class="button" type="checkbox">
+					<strong>
+						Send Email notifications
+					  </strong>
+					<span class="span-btn">
+					  <span>On</span>
+					  <span>Off</span>
+					  <a></a>
+					</span>
+				  </label>
+			</div>
+			<div class="btn-2">
+				<label class="switch-light switch-ios" onclick="">
+					<input class="button" type="checkbox">
+					<strong>
+						Set Profile to Public
+					  </strong>
+					<span class="span-btn">
+					  <span>On</span>
+					  <span>Off</span>
+					  <a></a>
+					</span>
+				</label>
+			</div>
+			<div class="zoneTime-btns">
+			<select class="time-zone">
+				<option>Select Timezone</option>
+				<option value="Atlantic Standard Time (AST)">Atlantic Standard Time (AST)</option>
+				<option value="Eastern Standard Time (EST)">Eastern Standard Time (EST)</option>
+				<option value="Pacific Standard Time (PST)">Pacific Standard Time (PST)</option>
+				<option value="Alaska Standard Time (AKST)">Alaskan Standard Time (AKST)</option>
+				<option value="Hawaii Standard Time (HST)">Hawaii Standard Time (HST)</option>
+			</select>
 
-      <!-- PROFILE SETTING -->
-      <label class="switch-light switch-candy" onclick="">
-        <input type="checkbox">
-        <strong>
-          Set Profile to Public
-        </strong>
-        <span>
-          <span>Off</span>
-          <span>On</span>
-          <a></a>
-        </span>
-      </label>
+				<button class="btn-save" type="submit">SAVE</button>
+				<button class="btn-cancel" type="submit">CANCEL</button>
+			</div>
+		  </div>
+	</main>
+ </div>
 
-      <!-- TIMEZONE SETTING -->
-      <select class="form-field" id="timezone">
-        <option disabled selected>Select a Timezone</option>
-        <option>Eastern</option>
-        <option>Central</option>
-        <option>Mountain</option>
-        <option>Pacific</option>
-        <option>Alaska</option>
-        <option>Hawaii</option>
-      </select>
-
-      <!-- SAVE & CANCEL BUTTONS -->
-      <div class="settings-button">
-        <button class="button-primary" id="save">Save</button>
-        <button class="button-disabled" id="cancel">Cancel</button>
-      </div>
-    </section>
-  </main>
+<!-- JAVASCRIPT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

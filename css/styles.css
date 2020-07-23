@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-/* --------------------------
+/* -----------------------------
   Type Styles
---------------------------- */
+------------------------------ */
 
 h2 {
   font-size: 1.3rem;
@@ -31,17 +31,17 @@ body {
   color: #4d4d4d;
 }
 
-/* --------------------------
+/* ------------------------------
   SVG Styles
---------------------------- */
+------------------------------- */
 
 .social-image {
 
 }
 
-/* --------------------------
+/* -----------------------------
   Header Styles
---------------------------- */
+------------------------------ */
 
 header {
   background-color: #248188;
@@ -90,9 +90,9 @@ h1 {
   margin-right: 25px;
 }
 
-/* --------------------------
+/* -----------------------------
   Navigation Styles
---------------------------- */
+------------------------------ */
 
 nav {
   background-color: #0d5259;
@@ -109,9 +109,9 @@ nav img {
   margin: 0 30px;
 }
 
-/* --------------------------
+/* -----------------------------
   Main Header Styles
---------------------------- */
+----------------------------- */
 
 .main-header {
   display: flex;
@@ -130,8 +130,8 @@ nav img {
   flex-grow: 1;
   align-items: center;
   background-color: #f2f2f2;
-  border-bottom: 2px solid #b2b2b2;
-  border-left: 2px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
   padding: 20px 30px;
 }
 
@@ -143,9 +143,9 @@ nav img {
   color: #b2b2b2;
 }
 
-/* --------------------------
+/* -----------------------------
    Traffic Styles
---------------------------- */
+------------------------------ */
 
 .traffic-container {
   display: flex;
@@ -167,9 +167,9 @@ nav img {
   padding-left: 30px;
 }
 
-/* --------------------------
+/* -----------------------------
   Social Styles
---------------------------- */
+------------------------------ */
 
 .social svg {
   width: 90px;
@@ -181,6 +181,7 @@ nav img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .social-container {
@@ -188,7 +189,7 @@ nav img {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 50vw;
+  width: 300px;
   border: 2px solid #b2b2b2;
   border-radius: 6px;
   background-color: #f2f2f2;
@@ -209,13 +210,16 @@ nav img {
   font-size: 2.5rem;
 }
 
-/* --------------------------
-  Members Styles
---------------------------- */
+/* -----------------------------
+  Members & Activity Styles
+------------------------------ */
 
-.members {
-  border: 2px solid #b2b2b2;
-  margin-top: 30px;
+.members,
+.activity {
+  border: 1px solid #b2b2b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .members-container img {
@@ -233,10 +237,84 @@ nav img {
   border-bottom: .5px solid #b2b2b2;
   padding-bottom: 15px;
   padding-right: 25px;
-
 }
 
 .members-text {
   flex-grow: 2;
   margin-left: 15px;
+}
+
+/* -----------------------------
+  Messaging & Settings Styles
+------------------------------ */
+
+.message,
+.settings {
+  border: 1px solid #b2b2b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.widget-container input {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.widget-container textarea {
+  height: 80px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+button {
+  height: 40px;
+  background-color: #248188;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-style: hidden;
+  border-radius: 4px;
+}
+
+#send {
+  width: 100%;
+}
+
+.switch-light {
+    margin: 10px 20px 22px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.switch-light strong {
+    margin-right: auto;
+}
+
+.switch-light span {
+    margin-left: auto;
+    width: 35%;
+}
+
+.settings-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.button-primary,
+.button-disabled {
+  width: 50%;
+}
+
+.button-disabled {
+  background-color: #b2b2b2;
+  margin-left: 10px;
 }

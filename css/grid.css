@@ -1,57 +1,60 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 50px 1fr;
+    grid-template-areas:
     "header"
     "navigation"
     "main";
 }
-
 header {
-  grid-area: header;
+    grid-area: header;
 }
-
 nav {
-  grid-area: navigation;
+    grid-area: navigation;
 }
-
 main {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
-.widget-container-full,
-.widget-container-half {
-  width: 95vw;
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+   display: grid;
+   grid-gap: 10px;
 }
 
-/* MEDIA QUERIES */
+
+/* -----------------------------
+  Media Queries
+------------------------------ */
 
 @media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 55px 1fr;
-    grid-template-areas:
-      "header header"
-      "navigation main";
-  }
-  .main {
-    grid-template-columns: 50%;
-  }
-  .traffic, .social {
-    grid-column: 1 / span 2;
-  }
-  .daily, .members, .message {
-    grid-column: 1 / span 1;
-  }
-  .mobile, .activity, .settings {
-    grid-column: 2 / span 1;
-  }
-  .widget-container-full {
-    width: 90vw;
-  }
-  .widget-container-half {
-    width: 45vw;
-  }
+    .grid-container {
+        grid-template-rows: 70px 60px 1fr;
+    }
+    .half-size-charts,
+    .member-info,
+    .message-and-settings {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas:
+        "header header"
+        "navigation main";
+    }
+
 }

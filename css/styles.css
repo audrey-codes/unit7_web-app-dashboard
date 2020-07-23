@@ -1,295 +1,338 @@
 * {
-  box-sizing: border-box;
-}
-
-/* -----------------------------
-  Type Styles
------------------------------- */
-
-h2 {
-  font-size: 1.3rem;
-}
-
-h3 {
-  font-size: 1rem;
-}
-
-h2,
-h3 {
-  text-transform: uppercase;
-  color: #7f7f7f;
-  margin-left: 25px;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #4d4d4d;
-}
-
-/* ------------------------------
-  SVG Styles
-------------------------------- */
-
-.social-image {
-
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
 }
 
 /* -----------------------------
   Header Styles
 ------------------------------ */
-
 header {
-  background-color: #248188;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
 }
 
-h1 {
-  font-weight: 300;
-  margin-right: auto;
-  margin-left: 30px;
-  color: #fff;
+.header-title {
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 1.4em;
+    color: white;
 }
 
-.bold {
-  font-weight: 700;
+.notification-bell {
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px solid #FFFFFF;
 }
 
-.user-profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 25px 0px;
+.bell {
+    width: 25px;
 }
 
-.header-icon {
-  width: 35px;
-  height: 35px;
-  margin: 0 25px;
+.bell:hover {
+    cursor: pointer;
 }
 
-.header-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: double 6px #0d5259;
+.bell:hover path {
+    fill: #0d5259;
 }
 
-.header-name {
-  color: #fff;
-  font-size: 1.25rem;
-  text-transform: inherit;
-  font-weight: 400;
-  margin-right: 25px;
+.dot {
+    background-color: #ee3f46;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 18px;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 6px;
+    margin-left: 10px;
+}
+
+.profile-pic {
+   border-radius: 50%;
+   padding: 2px;
+   margin-right: 5px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: white;
 }
 
 /* -----------------------------
   Navigation Styles
 ------------------------------ */
-
 nav {
-  background-color: #0d5259;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px;
+    text-align: center;
 }
 
-nav img {
-  width: 35px;
-  height: 35px;
-  margin: 0 30px;
+.nav-img {
+    margin: 10px 10px;
 }
 
 /* -----------------------------
-  Main Header Styles
------------------------------ */
-
+  Dashboard Styles
+------------------------------ */
 .main-header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.headline {
-  background-color: #fff;
-  margin: 0 25px;
+.headline-dashboard {
+    padding: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .main-header-search {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-  align-items: center;
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #b2b2b2;
-  border-left: 1px solid #b2b2b2;
-  padding: 20px 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    background-color: #ececec;
+    border-bottom: 2px solid #dfdfdf;
+    border-left: 2px solid #dfdfdf;
 }
 
-.search-bar {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #b2b2b2;
-  font-weight: 300;
-  color: #b2b2b2;
+.input {
+    flex-grow: 1;
+    margin: 8px 10px 8px 0;
+    border: 0.5px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 60%;
 }
 
 /* -----------------------------
-   Traffic Styles
+  Alert Styles
 ------------------------------ */
-
-.traffic-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+.alert {
+    max-height: 50px;
+    padding: 0px;
+    margin: 8px 20px;
+    border-radius: 5px;
+    background-color: #f47d23;
 }
 
+.alert-banner {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: #f47d23;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 0;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.alert-banner-close {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* -----------------------------
+  Chart Styles
+------------------------------ */
+.full-size-chart,
+.half-size-charts {
+    padding: 5px;
+}
+
+.widget-container-full,
+.widget-container-half {
+    width: 93vw;
+}
+
+#daily-traffic {
+}
+
+#doughnutChart {
+    max-width: 100% ;
+}
+
+/* -----------------------------
+  Traffic Styles
+------------------------------ */
+.traffic-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.headline-section {
+    color:;
+    margin-right: auto;
+    margin-left: 5px;
+}
 .traffic-nav {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 25px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    list-style-type: none;
 }
-
-.traffic-nav li {
-  padding-left: 30px;
+.traffic-nav-link {
+    padding: 0 3px;
+    font-size: 13px;
 }
 
 /* -----------------------------
   Social Styles
 ------------------------------ */
-
-.social svg {
-  width: 90px;
-  height: 90px;
-}
-
 .social {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
+    padding: 10px;
 }
 
-.social-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 300px;
-  border: 2px solid #b2b2b2;
-  border-radius: 6px;
-  background-color: #f2f2f2;
-  padding: 20px 25px;
-  margin-top: 20px;
+.box-twitter,
+.box-fb,
+.box-insta {
+    display: flex;
+    flex: 1 auto;
+    justify-content: center;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin: 5px 5px;
 }
 
-.social-text {
-  margin-right: 10px;
+.twitter-icon,
+.fb-icon,
+.insta-icon {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
 }
 
-.social-name {
-  font-weight: 700;
-  color: #248188;
+.twitter-info,
+.fb-info,
+.insta-info {
+    margin-left: 10px;
 }
 
-.social-count {
-  font-size: 2.5rem;
+.fb-icon {
+    margin-left:40px;
 }
 
-/* -----------------------------
-  Members & Activity Styles
------------------------------- */
-
-.members,
-.activity {
-  border: 1px solid #b2b2b2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.members-container img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-left: 25px;
-}
-
-.members-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: .5px solid #b2b2b2;
-  padding-bottom: 15px;
-  padding-right: 25px;
-}
-
-.members-text {
-  flex-grow: 2;
-  margin-left: 15px;
+.insta-icon {
+    margin-left: 29px;
 }
 
 /* -----------------------------
-  Messaging & Settings Styles
+  Members Styles
 ------------------------------ */
+.member-section {
+    margin: 10px 0 0 20px;
+}
 
-.message,
+.member-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.member-img {
+    border-radius: 50%;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.member-info {
+   align-items: center;
+   display: flex;
+}
+
+.member-info p{
+    font-size: 16px;
+}
+
+.member-info a {
+    text-decoration: none;
+    color: #ee3f46;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: -30px;
+}
+
+.member-date {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.activity-info {
+    padding-top: 10px;
+}
+
+/* -----------------------------
+  Message Styles
+------------------------------ */
+.message  {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.input-contact {
+    margin-bottom: 5px;
+}
+
+.input-contact,
+.textarea-contact {
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.textarea-contact{
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    color: rgb(114, 114, 114);
+}
+
+.btn-send {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #248188;
+    color: white;
+}
+
+/* -----------------------------
+  Settings Styles
+------------------------------ */
 .settings {
-  border: 1px solid #b2b2b2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px 30px;
-}
-
-.widget-container {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-}
-
-.widget-container input {
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-.widget-container textarea {
-  height: 80px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-}
-
-button {
-  height: 40px;
-  background-color: #248188;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-style: hidden;
-  border-radius: 4px;
-}
-
-#send {
-  width: 100%;
+    padding: ;
+    text-align: center;
 }
 
 .switch-light {
-    margin: 10px 20px 22px 10px;
+    margin: 10px 20px 22px 8px;
     display: flex;
     align-items: center;
 }
@@ -300,21 +343,137 @@ button {
 
 .switch-light span {
     margin-left: auto;
-    width: 35%;
 }
 
-.settings-button {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+.span-btn {
+    max-width: 25%;
 }
 
-.button-primary,
-.button-disabled {
-  width: 50%;
+.btn-1,
+.btn-2 {
+    font-size: 1rem;
 }
 
-.button-disabled {
-  background-color: #b2b2b2;
-  margin-left: 10px;
+/* -----------------------------
+  Additional Styles
+------------------------------ */
+.heading {
+    margin-left: 5px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.time-zone {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    border: 1px solid #b2b2b2;
+    color: #7f7f7f;
+    background-color: #f2f2f2;
+}
+
+.btn-save,
+.btn-cancel {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #248188;
+    color: white;
+    margin: 5px 10px;
+    width: 40%;
+}
+
+.btn-cancel {
+    background-color: #b2b2b2;
+}
+
+.dash-top {
+	background: #f2f2f2;
+}
+
+
+.chart-1,
+.chart-2,
+.members-1,
+.members-2 {
+	background: ;
+}
+.social-1,
+.social-2,
+.social-3,
+.message,
+.settings {
+	background: ;
+}
+
+header {
+	background: #248188;
+}
+
+nav {
+	background: #0d5259;
+}
+
+main {
+	background: white;
+}
+
+.nav-img,
+.profile-pic {
+    width: 30px;
+}
+
+/* -----------------------------
+  Media Queries
+------------------------------ */
+
+@media (min-width: 768px) {
+    .member-date {
+        margin-right: 30px;
+        font-size: 14px;
+    }
+    .activity-info {
+        font-size: 16px;
+    }
+    .switch-light {
+      margin-right: 30px;
+    }
+    .span-btn {
+        max-width: 10%;
+    }
+    .message-section {
+        margin-top: 40px ;
+    }
+    .btn-save,
+    .btn-cancel {
+        width: 20%;
+    }
+    .zoneTime-btns {
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .social-container {
+      width: 90vw;
+    }
+    .widget-container-full​ {
+        ​width​: ​90vh​;
+    }
+    ​.widget-container-half {
+        width: 45vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #daily-traffic {
+        max-width: 50%;
+        padding: 20px;
+    }
+    #doughnutChart {
+    }
 }

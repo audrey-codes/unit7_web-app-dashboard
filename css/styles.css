@@ -153,10 +153,6 @@ nav {
 /* -----------------------------
   Chart Styles
 ------------------------------ */
-.full-size-chart,
-.half-size-charts {
-    padding: 5px;
-}
 
 .widget-container-full,
 .widget-container-half {
@@ -239,9 +235,6 @@ nav {
 /* -----------------------------
   Members Styles
 ------------------------------ */
-.member-section {
-    margin: 10px 0 0 20px;
-}
 
 .member-container {
     display: flex;
@@ -290,7 +283,7 @@ nav {
 /* -----------------------------
   Message Styles
 ------------------------------ */
-.message  {
+.message-input  {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -388,7 +381,7 @@ h3 {
     background-color: #b2b2b2;
 }
 
-.dash-top {
+.dashboard {
 	background: #f2f2f2;
 }
 
@@ -414,6 +407,9 @@ main {
 ------------------------------ */
 
 @media (min-width: 768px) {
+    nav {
+      padding: 5px 10px;
+    }
     .member-date {
         margin-right: 30px;
         font-size: 14px;
@@ -441,6 +437,9 @@ main {
 
 
 @media (min-width: 1024px) {
+  nav {
+    padding: 5px 10px;
+  }
     .social-container {
       width: 90vw;
     }
@@ -452,11 +451,8 @@ main {
         display: flex;
         flex-direction: row;
     }
-
     #daily-traffic {
         max-width: 50%;
         padding: 20px;
-    }
-    #doughnutChart {
     }
 }

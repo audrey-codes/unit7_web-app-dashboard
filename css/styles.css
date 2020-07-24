@@ -243,6 +243,7 @@ nav {
     justify-content: flex-start;
     padding-bottom: 20px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 .member-img {
@@ -253,7 +254,7 @@ nav {
 }
 
 .member-info {
-   align-items: center;
+   align-items: flex-start;
    display: flex;
 }
 
@@ -267,15 +268,12 @@ nav {
     cursor: pointer;
     font-size: 16px;
     display: inline-block;
-    margin-top: -30px;
 }
 
 .member-date {
     display: flex;
     margin-left: auto;
-    margin-right: 15px;
-    font-size: 14px;
-    align-items: center;
+    justify-content: flex-end;
 }
 
 .activity-info {

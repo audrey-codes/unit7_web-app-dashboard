@@ -81,8 +81,10 @@ nav {
     text-align: center;
 }
 
-nav-img {
+.nav-img {
     margin: 10px 10px;
+    width: 40px;
+    height: 40px;
 }
 
 /* -----------------------------
@@ -174,17 +176,19 @@ nav-img {
     align-items: center;
     justify-content: flex-end;
 }
+
 .headline-section {
-    color:;
     margin-right: auto;
     margin-left: 5px;
 }
+
 .traffic-nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 5px;
     list-style-type: none;
 }
+
 .traffic-nav-link {
     padding: 0 3px;
     font-size: 13px;
@@ -193,15 +197,13 @@ nav-img {
 /* -----------------------------
   Social Styles
 ------------------------------ */
-.social {
-    padding: 10px;
-}
 
 .social {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .box-twitter,
@@ -318,7 +320,6 @@ nav-img {
   Settings Styles
 ------------------------------ */
 .settings {
-    padding: ;
     text-align: center;
 }
 
@@ -406,7 +407,7 @@ main {
   Media Queries
 ------------------------------ */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     nav {
       padding: 5px 10px;
     }
@@ -455,4 +456,4 @@ main {
         max-width: 50%;
         padding: 20px;
     }
-}
+} */

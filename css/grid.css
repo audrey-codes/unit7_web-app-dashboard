@@ -38,12 +38,9 @@ main {
     .grid-container {
         grid-template-rows: 70px 60px 1fr;
     }
-    .half-size-charts,
-    .member-info,
-    .message-and-settings {
+    section {
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
-
 }
 
 @media (min-width: 1024px) {

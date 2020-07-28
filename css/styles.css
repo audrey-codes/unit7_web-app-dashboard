@@ -11,6 +11,10 @@ body {
     color: #4d4d4d;
 }
 
+canvas {
+  max-width: 100%;
+}
+
 /* -----------------------------
   Header Styles
 ------------------------------ */
@@ -198,7 +202,7 @@ nav {
   Social Styles
 ------------------------------ */
 
-.social {
+.social-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -206,9 +210,7 @@ nav {
     padding: 10px;
 }
 
-.box-twitter,
-.box-fb,
-.box-insta {
+.flex-social {
     display: flex;
     flex: 1 auto;
     justify-content: center;
@@ -221,17 +223,22 @@ nav {
     margin: 5px 5px;
 }
 
-.twitter-icon,
-.fb-icon,
-.insta-icon {
-    height: 50px;
-    width: 50px;
+.social-image {
+    height: 60px;
+    width: 60px;
 }
 
-.twitter-info,
-.fb-info,
-.insta-info {
+.social-text {
     margin-left: 20px;
+}
+
+.social-text p:first-child {
+    color: #248188;
+    font-weight: bold;
+}
+
+.social-text p:last-child {
+    font-size: 28px;
 }
 
 /* -----------------------------
@@ -400,58 +407,3 @@ main {
 .profile-pic {
     width: 30px;
 }
-
-/* -----------------------------
-  Media Queries
------------------------------- */
-
-/* @media (min-width: 768px) {
-    nav {
-      padding: 5px 10px;
-    }
-    .member-date {
-        margin-right: 30px;
-        font-size: 14px;
-    }
-    .activity-info {
-        font-size: 16px;
-    }
-    .switch-light {
-      margin-right: 30px;
-    }
-    .span-btn {
-        max-width: 10%;
-    }
-    .message-section {
-        margin-top: 40px ;
-    }
-    .btn-save,
-    .btn-cancel {
-        width: 20%;
-    }
-    .zoneTime-btns {
-        padding: 20px;
-    }
-}
-
-
-@media (min-width: 1024px) {
-  nav {
-    padding: 5px 10px;
-  }
-    .social-container {
-      width: 90vw;
-    }
-    .widget-container-full​ {
-        ​width​: ​90vh​;
-    }
-    ​.widget-container-half {
-        width: 45vw;
-        display: flex;
-        flex-direction: row;
-    }
-    #daily-traffic {
-        max-width: 50%;
-        padding: 20px;
-    }
-} */

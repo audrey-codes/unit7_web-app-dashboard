@@ -1,4 +1,4 @@
-/*Traffic*/
+/* Traffic */
 const hourly = ["3", "6", "9", "12", "15", "18", "21", "00"];
 const daily = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const weekly = ["Week1", "Week2", "Week3", "Week4"];
@@ -9,7 +9,7 @@ const trafficCanvas = document.getElementById('traffic-chart');
 
 
 let trafficData = {
-    labels: monthly, 
+    labels: monthly,
     datasets: [{
       data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2300, 2500], // data on side of chart
       backgroundColor: 'rgba(36, 129, 136, .4)',
@@ -43,7 +43,9 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
-/* Bar chart */
+
+
+/* Bar Chart */
 
 const barChart = document.getElementById('daily-traffic');
 const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
@@ -71,9 +73,6 @@ let dailyChartData = {
     }
 };
 
-
-
-
 let dailyTrafficChart = new Chart(barChart, {
     type: 'bar',
     data: dailyChartData,
@@ -81,7 +80,7 @@ let dailyTrafficChart = new Chart(barChart, {
 });
 
 
-/* Doughnut chart */
+/* Doughnut Chart */
 
 const doughnutChart = document.getElementById('doughnutChart');
 
@@ -117,4 +116,24 @@ var myDoughnutChart = new Chart(doughnutChart, {
     type: 'doughnut',
     data: doughnutData,
     options: doughnutOptions
+});
+
+/* Message User Alert */
+
+const user = document.getElementById("userArea");
+const message = document.getElementById("messageArea");
+const send = document.getElementById("send");
+
+send.addEventListener("click", function(){
+
+  if (user.value === "" && message.value === ""){
+    alert("Please complete both fields before sending")
+  } else if (user.value === ""){
+      alert("Please select a user to message")
+  } else if (user.message === ""){
+      alert("Don't forget to complete your message")
+  } else {
+      alert("Message sent successfully!")
+  }
+
 });

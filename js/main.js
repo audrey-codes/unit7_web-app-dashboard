@@ -130,7 +130,7 @@ send.addEventListener("click", function(){
     alert("Please complete both fields before sending")
   } else if (user.value === ""){
       alert("Please select a user to message")
-  } else if (user.message === ""){
+  } else if (message.value === ""){
       alert("Don't forget to complete your message")
   } else {
       alert("Message sent successfully!")

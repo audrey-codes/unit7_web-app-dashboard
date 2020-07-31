@@ -258,11 +258,6 @@ nav {
     height: 60px;
 }
 
-.member-info {
-   display: flex;
-   justify-content: space-between;
-   flex-direction: row;
-}
 
 .member-info p{
     font-size: 16px;
@@ -405,12 +400,16 @@ main {
   Media Queries
 ------------------------------ */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .member-container {
     flex-direction: row;
+
+  }
+  .member-info {
+      flex-direction: column;
+      justify-content: center;
   }
   .member-date {
-    display: flex;
-    justify-content: flex-end;
+     margin: auto 0 auto auto;
   }
 }

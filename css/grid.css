@@ -23,7 +23,7 @@ main {
 
 .half-size-charts,
 .social-media-info,
-.member-info,
+.members-main-container,
 .message-and-settings {
    display: grid;
    grid-gap: 10px;
@@ -49,8 +49,8 @@ main {
         "navigation main";
     }
     .half-size-charts,
-    .member-info,
+    .members-main-container,
     .message-and-settings {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 }
